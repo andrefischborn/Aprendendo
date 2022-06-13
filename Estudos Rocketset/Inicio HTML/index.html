@@ -1,0 +1,95 @@
+<H1>TITULO H1</H1><BR>
+    TEXTO<BR>
+        TEXTO
+        teste
+        teste2
+
+        <!--
+Comentários sobre o próximo código
+        -->
+        <br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, voluptatem facilis culpa ipsam odio eligendi consectetur alias expedita, aperiam est, accusamus maxime nulla dolor ea officiis numquam dignissimos laborum quibusdam.
+        <h2>TITULO H2</h2>
+        <h3>TITULO H3</h3>
+
+                                  <!-- Atributos vazios --> <!-- NUNCA FECHAR --> 
+
+<!--adicionar imagem-->
+        <br><img src="" alt="TEXTO"> <!--Se colocar apenas o texto no alt, a imagem aparece, mas quebrada--> <!-- NÃO FECHAR COM </IMG> -->
+
+<!-- adicionar UMA CAIXA de entrada de texto-->
+        <br><br><br><input type="text"> Escreva aqui <!-- NÃO FECHAR COM </INPUT>-->
+
+<!-- adicionar UMA CAIXA de entrada de texto NÃO EDITÁVEL-->
+        
+<br><br><br><input type="text" disabled> <!-- atributo boleano "disabled" torna "Falso" e não permite escrever na caixa-->
+
+                
+<!-- ----------------------------------------------------------------------------------------->
+                        <!--Aula sobre Atributos Globais mais usados:-->
+
+<!--CLASS-->
+    <div class="carrinho">
+        <br>Conteúdo NÃO EDITÁVEL 
+    </div>
+    <div class="Carrinho" contenteditable="true"> <!-- CONTENT EDITABLE É TIPO UM "INPUT" DÁ PRA EDITAR NO NAVEGADOR mas some ao carregar-->
+        <br>Conteúdo EDITÁVEL- NAVEGADOR - Some a edição quando atualizar a págima
+    </div>
+<!-- ----------------------------------------------------------------------------------------->
+
+<!--DATA-->
+<div class="carrinho" data-qualquer-nome-aqui=""> <!--serve para fazer lógicas com o JavaScript-->
+    <br>Conteúdo 
+</div>
+<!-- ----------------------------------------------------------------------------------------->
+
+<!--HIDDEN-->
+<div class="carrinho" hidden> <!--Serve para esconder um conteúdo-->
+    <br>ESTE CONTEÚDO ESTÁ INVISÍVEL NO NAVEGADOR
+</div>
+<!-- ----------------------------------------------------------------------------------------->
+
+                            <!--SOBRE REPETIÇÕES DE CLASSE E ID-->
+
+<div class="carrinho" data-qualquer-nome-aqui="" id="cart1"> <!--a class pode repetir, o ID DEVE SER DIFERENTE!-->
+    <br>Conteúdo  - CLASS CARRINHO E ID CART1
+</div>
+<div class="carrinho" data-qualquer-nome-aqui="" id="cart2"> <!--a class pode repetir, o ID DEVE SER DIFERENTE!-->
+    <br>Conteúdo  - CLASS CARRINHO E ID CART2
+</div>
+<div class="carrinho" data-qualquer-nome-aqui="" id="cart3"> <!--a class pode repetir, o ID DEVE SER DIFERENTE!-->
+    <br>Conteúdo  - CLASS CARRINHO E ID CART3
+</div>
+<div class="carrinho" data-qualquer-nome-aqui="" id="cart4"> <!--a class pode repetir, o ID DEVE SER DIFERENTE!-->
+    <br>Conteúdo  - CLASS CARRINHO E ID CART4
+</div>
+<!-- ----------------------------------------------------------------------------------------->
+                                    <!--STYLE - ESTILOS -->
+    <!-- NORMALMENTE NÃO USADOS STYLE DENTRO DO DIV, USA-SE EM OUTRO LUGAR QUE VEREMOS MAIS PRE FRENTE-->
+<div class="carrinho" data-qualquer-nome-aqui="" id="cart5" style="color: red"> 
+    <br>Conteúdo  - CLASS CARRINHO E ID CART5 COM STYLE COLOR RED   
+</div>
+<div class="carrinho" data-qualquer-nome-aqui="" id="cart6" style="color: rgba(62, 118, 172, 0.733)"> 
+    <br>Conteúdo  - CLASS CARRINHO E ID CART5 COM STYLE COLOR "rgba(62, 118, 172, 0.733)"
+</div>
+<!-- ----------------------------------------------------------------------------------------->
+                                        <!--TAB INDEX-->
+<!--SERVE PARA PESSOAS NAVEGAR PELOS ITENS USANDO A TECLA TAB, O TAB PULARÁ PARA O NUMÉRO EM SEQUENCIA-->
+<div tabindex="1">
+    CONTEÚDO TAB INDEX 1
+</div>
+<div tabindex="3">
+    CONTEÚDO TAB INDEX 3
+</div>
+<div tabindex="2">
+    CONTEÚDO TAB INDEX 2
+</div>
+<!-- ----------------------------------------------------------------------------------------->
+<!--TITTLE-->
+<div title="Você posicionou o mouse aqui"> <!--Não muda para o usuário, apenas se deixar o mouse em cima-->
+    TITTLE (posicione o mouse em cima para ver)
+</div>
+
+<!-- ----------------------------------------------------------------------------------------->
+<!--UMA LISTA COM MAIS ATRIBUTOS GLOBAIS PODE SER ENCONTRADA EM 
+    https://developer.mozilla.org/pt-BR/docs/Web/HTML/Global_attributes-->
