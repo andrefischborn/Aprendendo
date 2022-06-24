@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando Números</title>
+    <!--CODIGOS CSS-->
+    <style> 
+        body {
+            font: normal 18pt Arial;    /*TEXTO GERAL DA PAGINA*/
+        }
+        input {                         /*CONFIGURAÇÕES VISUAIS DAS CAIXAS DE INPUT*/
+            font: normal 18pt Arial;
+            width: 100px; /*LARGURA*/
+        }
+        div#res {                      
+            margin-top: 20px; /*AQUI COLOCAMOS UMA PEQUENA MARGEM PARA NÃO USAR <BR> E POLUIR O CÓDIGO*/
+        }
+    </style> <!--FIM CSS-->
+</head>
+<body> <!--CODIGOS HTML -->
+    <h1>Somando Valores</h1>
+    <input type="number" name="txtn1" id="txtn1"> + <!--AQUI É CRIANDO UMA CAIXA DE INPUT PARA O VALOR 1-->
+    <input type="number" name="txtn2" id="txtn2">   <!--AQUI É CRIANDO UMA CAIXA DE INPUT PARA O VALOR 2-->
+    <input type="button" value="Somar" onclick="somar()"> <!--AQUI É CRIANDO UM BOTÃO DE AÇÃO-->
+    
+    <div id="res">RESULTADO</div> <!--DIV QUE O JS VAI TRABALHAR-->
+
+    <!--INICIO DO JAVASCRIPT-->
+    <script>
+        function somar(){ //CRIANDO A FUNÇÃO DO BOTÃO DE SOMAR
+            var tn1 = window.document.getElementById('txtn1') // Usando o Element ID
+            var tn2 = window.document.querySelector('input#txtn2') // Aqui é uma forma diferente de fazerm usando o selector //
+            var res = window.document.getElementById('res') // Usando o Element ID
+            var n1 = Number(tn1.value) // O ELEMENTO PREENCHIDO NA CAIXA INPUT 1 SE TORNARÁ A VARIÁVEL N1
+            var n2 = Number(tn2.value) // O ELEMENTO PREENCHIDO NA CAIXA INPUT 2 SE TORNARÁ A VARIÁVEL N2
+            var s = n1 + n2 // SOMANDO AS VARIÁVEIS, NÃO FICA CONCATENADO PORQUE NÃO TEM ASPAS
+            res.innerHTML = `A soma entre ${n1} + ${n2} é igual a: <strong>${s}</strong>`
+        }
+        window.alert ('Olá, seja bem vindo. Esta é uma calculadora de soma criada para aprendizado. Foi feita em HTML, CSS E JS no dia 20/06/2022.') // Mensagem de boas vindas.
+    </script> <!--FIM DO JAVASCRIPT-->
+</body>
+</html>

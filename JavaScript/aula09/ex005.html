@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+body{
+    background-color: rgb(111, 152, 212);
+    color: white;
+    font: normal 18pt Arial;
+}
+    </style>
+</head>
+
+<body>
+    <h1>Iniciando os estudos com DOM</h1>
+    <p>Aqui vai o resultado</p> <!--Este é o primeiro paragráfo, o <p> número zero 0-->
+    <p>Aprendendo a usar <strong>o DOM</strong> em JavaScript.</p> <!--Este é considerado a segunda vez que aparece P, ele é o número 1 e assim por diante.-->
+    <div>DIV Original ainda em HTML (SEM TIPO CADASTRADO)</div><br> <BR>
+
+    <div id="msg">DIV Original ainda em HTML ("ID MSG")</div><br><!--Exemplo de como colocar ID em uma DIV-->
+    <div name="name1">DIV Original ainda em HTML ("NAME name1")</div><br><!--Exemplo de como colocar NAME em uma DIV-->
+    <div class="QS">DIV Original ainda em HTML ("NAME QS")</div><br><!--Exemplo de como colocar CLASS em uma DIV-->
+
+<br><br><br>
+<p>Aqui começa elementos em JAVASCRIPT:</p>
+
+<!--* INICIO DO JAVASCRIPT: *-->
+<script>
+    /*=============== LISTA DE VARIÁVEIS + GET ELEMENT DAS DIVS: ===============*/
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[1] /* 0 corresponde ao numero de elemento P, o primeiro*/
+        var d = window.document.getElementById('msg') /*Aqui Transformamos a DIV "MSG" em uma Variável "d" */
+        var n1 = window.document.getElementsByName('name1')[0] /*Elements, plural, sempre tem que por os colchetes*/
+        /*USANDO O QUERY SELECTOR - Mais moderno, só funciona em navegadores mais novos */
+        var QS1 = window.document.querySelector('div.QS') /*O "." (ponto), serve para "CLASS", O "#" (Sharp) serve para ID */
+
+/*=============== BRINCANDO COM ALGUMS COMANDOS: ===============*/
+    window.document.write(p1.innerText) /*Aqui ele pega o que está escrito no P1 e copia para aparecer no navegador.*/
+    document.write(p1.innerHTML) /* Também escreve o conteudo de P1, Formatado igual o HTML */
+    window.alert(p1.innerText) /* Abre uma Janela de Alerta no Navegador com o conteudo P1 */
+
+    /*==== Assim podemos editar cores do site, tipo um CSS : ===== - REMOVA O COMANDO DE COMENTARIOS PARA VER NO NAVEGADOR*/
+    p1.style.color = 'blue'
+    QS1.style.color = 'red'
+    QS1.style.background = 'black'
+    /* corpo.style.background = 'black' */
+    d.style.background = 'green'
+   
+    /* ----- Brincando com as mudanças na DIV ----*/
+   d.innerText = 'DIV alterada com JavaScript (ANTIGA DIV ID MSG)' /*Aqui modifica o conteudo da DIV ID MSG, passa a valer esse conteudo ao inves do HTML*/
+   n1.innerText = 'DIV alterada com JavaScript (ANTIGA DIV NAME1)' /*Aqui modifica o conteudo da DIV NAME name1, passa a valer esse conteudo ao inves do HTML*/
+   QS1.innerText = 'DIV alterada com JavaScript (ANTIGA DIV QS)' /*Aqui modifica o conteudo da DIV NAME name1, passa a valer esse conteudo ao inves do HTML*/
+
+      </script> <!--* FIM DO JAVASCRIPT *-->
+    
+</body>
+
+</html>
